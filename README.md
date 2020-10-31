@@ -1,7 +1,23 @@
-# ascii-webcam
+### 📷 [ASCII-Webcam](https://github.com/micodeyt/ascii-webcam)
 
-Affiche la webcam en ASCII art dans votre terminal.
+## INFO
 
-Utilisé dans la vidéo : https://youtu.be/DBnStqiLB-Q
+> ✅ Affiche votre webcam en ASCII dans votre terminal !<br/>
+> 🎥 Utilisé dans la vidéo : https://youtu.be/DBnStqiLB-Q<br/>
+> 📍 Ce projet a été inspiré par : https://github.com/uvipen/ASCII-generator
 
-Ce projet a été inspiré par [uvipen/ASCII-generator](https://github.com/uvipen/ASCII-generator)
+## Installation
+
+```sh
+- git clone https://github.com/micodeyt/ascii-webcam
+
+- cd /path
+
+- pip install -r requirements.txt
+```
+
+## Utilisation
+
+```sh
+py cam.py
+```
