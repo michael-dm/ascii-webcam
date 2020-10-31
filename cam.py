@@ -2,7 +2,7 @@ from cv2 import cv2
 import numpy as np
 
 def main():
-  vc = cv2.VideoCapture(0)
+  vc = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
   if vc.isOpened():
     rval, frame = vc.read()
