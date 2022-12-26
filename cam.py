@@ -1,8 +1,19 @@
-from cv2 import cv2
+#!/usr/bin/python
+
+import cv2 as cv
 import numpy as np
+import sys
+import platform
 
 def main():
-  vc = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+
+  vc = None
+
+  if platform.system() == 'Windows':
+    vc = cv.VideoCapture(0,cv.CAP_DSHOW)
+
+  elif platform.system() == 'Linux':
+    vc = cv.VideoCapture(0)
 
   if vc.isOpened():
     rval, frame = vc.read()
@@ -10,17 +21,20 @@ def main():
     rval = False
 
   while rval:
+  #while True:
     rval, frame = vc.read()
     print(toASCII(frame))
 
-    key = cv2.waitKey(50) # 50ms pause -> ~20fps
+    key = cv.waitKey(50) # 50ms pause -> ~20fps
     # Press echap to end
     if key == 27:
       break
 
+  sys.exit()
+
 def toASCII(frame, cols = 120, rows = 35):
 
-  frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+  frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
   height, width = frame.shape
   cell_width = width / cols
   cell_height = height / rows
