@@ -12,7 +12,7 @@ def main():
   if platform.system() == 'Windows':
     vc = cv.VideoCapture(0,cv.CAP_DSHOW)
 
-  elif platform.system() == 'Linux':
+  elif platform.system() == 'Linux' or platform.system() == 'Darwin':
     vc = cv.VideoCapture(0)
 
   if vc.isOpened():
