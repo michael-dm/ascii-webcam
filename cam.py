@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import cv2 as cv
 import numpy as np
@@ -12,7 +12,7 @@ def main():
   if platform.system() == 'Windows':
     vc = cv.VideoCapture(0,cv.CAP_DSHOW)
 
-  elif platform.system() == 'Linux':
+  elif platform.system() == 'Linux' or platform.system() == 'Darwin':
     vc = cv.VideoCapture(0)
 
   if vc.isOpened():
