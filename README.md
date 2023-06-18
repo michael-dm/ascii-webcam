@@ -1,4 +1,4 @@
-### ASCII Webcam
+# ASCII Webcam
 
 Affiche votre webcam en ASCII dans votre terminal !  
 
